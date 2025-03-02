@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <nav class="navigation">
+                <a href="#">Service</a>
+            </nav>
+        </div>
+        <div class="user-info">
+            <div class="notification-icon">
+                <span class="notification-count">3</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.93 6 11v5l-2 2v1h16v-1l-2-2z"/>
+                </svg>
+            </div>
+            <div class="icon-container">
+                <div class="profile-banner">
+                    <img id="profile-image" src="./images/vecteezy_profile-icon-avatar-icon-user-icon-person-icon_20911732.png" alt="Photo de profil par défaut">
+                </div>
+                <div class="dropdown-menu">
+                    <a href="#">Profil</a>
+                    <a href="#">Paramètres</a>
+                    <a href="#">Déconnexion</a>
+                    <a href="#">Aide</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="grid-container">
+            <div class="grid-item merged">
+                <!-- Cadre circulaire pour la photo de profil -->
+                <div class="container-profile">
+                    <div class="profile-circle">
+                        <img id="profile-image" src="./images/vecteezy_profile-icon-avatar-icon-user-icon-person-icon_20911732.png" alt="Photo de profil par défaut">
+                    </div>
+                </div>
+                <!-- Bouton Modifier 
+                <button class="modify-button" onclick="document.getElementById('file-input').click()">Modifier</button>
+                <input type="file" id="file-input" class="file-input" accept="image/*" onchange="updateProfilePicture(event)">
+            -->
+                <div class="container-hbtn">
+                    <div class="home-btn">
+                        <i class="fas fa-home"></i> <!-- Icône Home de Font Awesome -->
+                    </div>
+                </div>
+                <div class="container-btn">
+                    <div>
+                        <button>Rendez-vous<br>prevus</button>
+                    </div>
+                    <div>
+                        <button>Rendez-vous<br>termines</button>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">Colonne 2 - Ligne 1</div>
+            <div class="grid-item">
+                <!-- Calendrier intégré ici -->
+                <div class="calendar">
+                    <div class="month">
+                        <i class="prev">&#10094;</i>
+                        <div class="date">décembre 2023</div>
+                        <i class="next">&#10095;</i>
+                    </div>
+                    <div class="weekdays">
+                        <div>Dim</div>
+                        <div>Lun</div>
+                        <div>Mar</div>
+                        <div>Mer</div>
+                        <div>Jeu</div>
+                        <div>Ven</div>
+                        <div>Sam</div>
+                    </div>
+                    <div class="days">
+                        <!-- Les jours seront générés dynamiquement en JavaScript -->
+                    </div>
+                    <div class="goto-today">
+                        <div class="goto">
+                            <input type="text" placeholder="mm/yyyy" class="date-input" />
+                            <button class="goto-btn">Aller</button>
+                        </div>
+                        <button class="today-btn">Aujourd'hui</button>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <!-- Contrôles interactifs -->
+                <div class="controls">
+                    <label for="productSelect">Formation :</label>
+                    <select id="productSelect">
+                        <option value="all">Toutes les formations</option>
+                        <option value="product1">Formation 1</option>
+                        <option value="product2">Formation 2</option>
+                        <option value="product3">Formation 3</option>
+                    </select>
+        
+                    <label for="periodSelect">Période :</label>
+                    <select id="periodSelect">
+                        <option value="monthly">Par mois</option>
+                        <option value="yearly">Par année</option>
+                    </select>
+        
+                    <button id="updateChart">Mettre à jour</button>
+                </div>
+        
+                <!-- Conteneur pour le graphique -->
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </main>
+    
+    <script src="./js/photo.js"></script>
+    <script src="./js/calendrier.js"></script>
+    <script src="./js/chart.js"></script>
+</body>
+</html>
